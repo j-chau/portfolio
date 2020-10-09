@@ -11,7 +11,122 @@
 </head>
 
 <body>
-    <h1>title</h1>
+    <a href="#mainContent" class="skip-link">Skip to main content</a>
+    <header>
+        <nav>
+            <a href="#">chauJoey</a>
+            <ul class="top-nav">
+                <li><a href="#">home</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">projects</a></li>
+                <li><a href="#">blog</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+        </nav>
+
+        <h1>
+            <p>Welcome</p>
+            <h1>Joey Chau</h1>
+            <p>Web Developer</p>
+        </h1>
+    </header>
+
+    <main id="mainContent">
+        <section id="about">
+            <img src="./placeholders/profile.jpg" alt="profile - placeholder">
+            <h2>About Me</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint odio natus quos unde earum. Non deleniti
+                deserunt rem saepe minus assumenda ratione molestiae at explicabo fugit! Dolorum, officiis placeat. In
+                facilis architecto aperiam asperiores aut?</p>
+            <a href="#">Resume</a>
+        </section>
+
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <ul class="skills-list">
+                <li>skill 1</li>
+                <li>skill 2</li>
+                <li>skill 3</li>
+                <li>skill 4</li>
+                <li>skill 5</li>
+                <li>skill 6</li>
+            </ul>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <ul class="project-list">
+                <li>
+                    <img src="./placeholders/camping.jpg" alt="project1 - placeholder">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta dolores tenetur vel laboriosam
+                        odio excepturi earum maxime doloremque ratione alias.</p>
+                </li>
+                <li>
+                    <img src="./placeholders/coffee.jpg" alt="project2 - placeholder">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta dolores tenetur vel laboriosam
+                        odio excepturi earum maxime doloremque ratione alias.</p>
+                </li>
+                <li>
+                    <img src="./placeholders/bouldering.jpg" alt="project3 - placeholder">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta dolores tenetur vel laboriosam
+                        odio excepturi earum maxime doloremque ratione alias.</p>
+                </li>
+                <li>
+                    <img src="./placeholders/cookies.jpg" alt="project4 - placeholder">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta dolores tenetur vel laboriosam
+                        odio excepturi earum maxime doloremque ratione alias.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="blog">
+            <h2>Blog</h2>
+            <article>
+                <img src="placeholders/blogpost1.jpg" alt="blog post 1 - placeholder">
+                <h3><a href="#">I like working in cafes</a></h3>
+                <p class="publish-date">October 9th, 2020</p>
+            </article>
+            <article>
+                <img src="placeholders/blogpost2.jpg" alt="blog post 2 - placeholder">
+                <h3><a href="#">Climbing has defined my personality</a></h3>
+                <p class="publish-date">October 1st, 2020</p>
+            </article>
+        </section>
+
+        <section id="contact">
+            <h2>Let's Connect</h2>
+            <form>
+                <label for="name">Name</label>
+                <input type="text" id="name">
+                <label for="email">Email</label>
+                <input type="email" id="email">
+                <label for="msg">Message</label>
+                <textarea></textarea>
+                <button type="submit">Submit</button>
+            </form>
+            <nav class="social-list">
+                <ul>
+                    <li><a href="https://github.com/j-chau" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <span class="sr-only">Find me on GitHub</span>
+                        </a></li>
+                    <li><a href="https://www.linkedin.com/in/joey-chau/" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                            <span class="sr-only">Find me on LinkedIn</span>
+                        </a></li>
+                    <li><a href="https://twitter.com/jchau_mein" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                            <span class="sr-only">Find me on Twitter</span>
+                        </a></li>
+                </ul>
+            </nav>
+        </section>
+
+    </main>
+    <footer>
+        <p>Created by Joey Chau</p>
+        <p>portfolio <a href="#">GitHub</a></p>
+    </footer>
 </body>
 
 </html>
