@@ -15,7 +15,15 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
 }
-
+.body-wrap {
+    width: 90%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+.content-wrap {
+    width: 75%;
+    margin: 0 auto;
+}
 img {
     width: 100%;
 }
