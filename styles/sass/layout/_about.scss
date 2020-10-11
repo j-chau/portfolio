@@ -1,0 +1,9 @@
+.about-content {
+    display: flex;
+    > * {
+        width: 50%;
+    }
+}
+.about-text {
+    margin-left: 150px;
+}
