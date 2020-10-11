@@ -7,3 +7,18 @@ body {
 .logo {
     font-family: 'Libre Baskerville', serif;
 }
+h2 {
+    font-size: 1.4em;
+    margin-bottom: 1.2em;
+    position: relative;
+    &::before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        bottom: -0.1em;
+        left: 0;
+        width: 45px;
+        height: 2px;
+        background-color: grey;
+    }
+}
