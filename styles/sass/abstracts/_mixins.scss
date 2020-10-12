@@ -1,0 +1,7 @@
+@mixin project-arrow($left) {
+    content: '';
+    position: relative;
+    display: inline-block;
+    left: $left;
+    border: $arrow-size solid transparent;
+}
