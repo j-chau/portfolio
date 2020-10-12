@@ -1,0 +1,37 @@
+.project-content {
+    padding: 8em 0;
+}
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    li {
+        filter: grayscale(100%);
+        pointer-events: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        &:nth-of-type(n + 3) .project-details {
+            grid-row: 1;
+            text-align: right;
+        }
+        &:focus,
+        &:hover {
+            filter: grayscale(10%);
+            &::before {
+                content: '';
+                position: absolute;
+                display: block;
+                top: 0.8em;
+                left: 0.8em;
+                width: 100%;
+                height: 100%;
+                border: 1px solid grey;
+                z-index: 1;
+            }
+        }
+    }
+}
+.project-details {
+    text-align: left;
+    padding: 0.5em;
+}
