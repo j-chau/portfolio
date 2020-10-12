@@ -2,10 +2,16 @@ html { font-size: 62.5%; }
 
 body { 
     font-size: 1.8rem;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    color: $dark-grey;
 }
 .logo {
     font-family: 'Libre Baskerville', serif;
+}
+h2, h3 {
+    font-weight: 400;
+    color: $black;
 }
 h2 {
     font-size: 1.4em;
@@ -15,11 +21,11 @@ h2 {
         content: '';
         position: absolute;
         display: inline-block;
-        bottom: -0.1em;
-        left: 4px;
+        bottom: -0.2em;
+        left: 2px;
         width: 45px;
         height: 2px;
-        background-color: grey;
+        background-color: $light-grey;
     }
 }
 h3 {
@@ -28,10 +34,10 @@ h3 {
 .project-list li {
     &:nth-of-type(-n + 2) h3::before {
         @include project-arrow(-6px);
-        border-right: $arrow-size solid grey;
+        border-right: $arrow-size solid $light-grey;
     }
     &:nth-of-type(n + 3) h3::after {
         @include project-arrow(6px);
-        border-left: $arrow-size solid grey;
+        border-left: $arrow-size solid $light-grey;
     }
 }
