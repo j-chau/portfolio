@@ -1,0 +1,41 @@
+.blog-content {
+    padding: 6em 0;
+}
+.blog-list {
+    display: flex;
+    justify-content: space-between;
+    .img-ratio {
+        position: relative;
+        overflow: hidden;
+        padding-bottom: 58.25%;
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            filter: grayscale(100%)
+        }
+    }
+    li {
+        width: 440px;
+        & > *:not(:first-child) {
+            margin-left: 5%;
+        }
+        h3 {
+            position: relative;
+        }
+        h3::before {
+            content: '</>';
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 60px;
+            height: 60px;
+            top: -70px;
+            font-weight: 300;
+            font-size: 0.8em;
+            color: $light-grey;
+            background-color: $black;
+        }
+    }
+}

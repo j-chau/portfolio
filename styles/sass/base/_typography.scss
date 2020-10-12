@@ -41,3 +41,17 @@ h3 {
         border-left: $arrow-size solid $light-grey;
     }
 }
+.blog-list li h3 {
+        font-size: 1.3em;
+        margin: 0.8em 0 0.5em;
+    }
+    .publish-date {
+    font-size: 0.7em;
+    letter-spacing: 0.8px;
+    span {
+        color: $black;
+    }
+    .category {
+        border-bottom: 1px dotted $light-grey;
+    }
+}
