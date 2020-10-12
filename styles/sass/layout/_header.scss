@@ -1,3 +1,16 @@
 body {
     padding-top: 50px;
 }
+header nav {
+    display: flex;
+    justify-content: space-between;
+    ul {
+        display: flex;
+    }
+    li {
+        padding-left: 2em;
+        a {
+            padding: 0.5em 0;
+        }
+    }
+}
