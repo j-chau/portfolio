@@ -1,13 +1,12 @@
 .contact-content {
     padding: 6em 0 8em;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     h2 {
         width: 100%;
     }
     form {
-        width: 50%;
+        width: 60%;
     }
     button {
         background-color: $black;
@@ -56,5 +55,21 @@
     }
     textarea {
         resize: none;
+    }
+}
+.social-list {
+    width: 32%;
+}
+.social-link {
+    display: flex;
+    width: max-content;
+    margin: 0.5em;
+    i {
+        width: 30px;
+    }
+    .username {
+        filter: invert(100%);
+        background-color: white;
+        padding: 0 0.2em 0.1em;
     }
 }
