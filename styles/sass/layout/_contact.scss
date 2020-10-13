@@ -9,6 +9,27 @@
     form {
         width: 50%;
     }
+    button {
+        background-color: $black;
+        color: white;
+        padding: 0.6em 1.2em;
+        position: relative;
+        &:hover {
+            box-shadow: 10px 10px 0 -1px white,
+                        10px 10px 0 $black;
+            &::before {
+                content: '';
+                position: absolute;
+                display: block;
+                left: 10px;
+                top: 10px;
+                width: calc(100% - 11px);
+                height: calc(100% - 11px);
+                border-top: 1px solid white;
+                border-left: 1px solid white;
+            }
+        }    
+    }
 }
 .input {
     border: 1px solid $dark-grey;
