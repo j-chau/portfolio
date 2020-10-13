@@ -1,0 +1,39 @@
+.contact-content {
+    padding: 6em 0 8em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    h2 {
+        width: 100%;
+    }
+    form {
+        width: 50%;
+    }
+}
+.input {
+    border: 1px solid $dark-grey;
+    margin-bottom: 1.6em;
+    position: relative;
+    > * {
+        border: none;
+        width: 100%;
+    }
+    label {
+        position: absolute;
+        left: 1em;
+        top: -25%;
+        width: min-content;
+        padding: 0 0.1em;
+        background-color: white;
+    }
+    .msg-label {
+        top: -8%;
+    }
+    input, textarea {
+        line-height: 1.6em;
+        padding: 0.4em 1em 0.2em;
+    }
+    textarea {
+        resize: none;
+    }
+}
