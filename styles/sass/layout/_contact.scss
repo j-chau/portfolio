@@ -13,13 +13,7 @@
         color: white;
         padding: 0.6em 1.2em;
         position: relative;
-        &:hover {
-            box-shadow: 10px 10px 0 -1px white,
-                        10px 10px 0 $black;
-            &::before {
-                content: '';
-                position: absolute;
-                display: block;
+                @include pseudo;
                 left: 10px;
                 top: 10px;
                 width: calc(100% - 11px);
