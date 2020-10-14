@@ -1,7 +1,14 @@
 .contact-content {
-    padding: 6em 0 8em;
-    display: flex;
-    justify-content: space-between;
+    background-image: url('./../assets/contact-img.jpg');
+    background-size: cover;
+    background-position: 50% 25%;
+    position: relative;
+    @include shift-border;
+    .content-wrap {
+        padding: 6em 0 8em;
+        display: flex;
+        justify-content: space-between;
+    }
     h2 {
         width: 100%;
     }
@@ -13,13 +20,22 @@
         color: white;
         padding: 0.6em 1.2em;
         position: relative;
+        &:hover,
+        &:focus {
+            &::before, &::after {
                 @include pseudo;
                 left: 10px;
                 top: 10px;
+            }
+            &::before {
                 width: calc(100% - 11px);
                 height: calc(100% - 11px);
                 border-top: 1px solid white;
                 border-left: 1px solid white;
+                z-index: 1;
+            }
+            &::after {
+                border: 1px solid $black;
             }
         }    
     }
@@ -35,13 +51,10 @@
     label {
         position: absolute;
         left: 1em;
-        top: -25%;
+        top: -0.65em;
         width: min-content;
         padding: 0 0.1em;
-        background-color: white;
-    }
-    .msg-label {
-        top: -8%;
+        background-image: linear-gradient(180deg, transparent 55%, white 55% 100%);
     }
     input, textarea {
         line-height: 1.6em;
