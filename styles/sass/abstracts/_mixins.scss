@@ -13,10 +13,11 @@
     height: 100%;
 }
 @mixin shift-border {
-    &::before {
+    position: relative;
+    &::after {
         @include pseudo;
-        top: 30px;
-        left: 30px;
+        top: $shift-size;
+        left: $shift-size;
         border: 1px solid $black;
     }
 }

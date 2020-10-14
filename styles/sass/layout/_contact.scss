@@ -2,7 +2,6 @@
     background-image: url('./../assets/contact-img.jpg');
     background-size: cover;
     background-position: 50% 25%;
-    position: relative;
     @include shift-border;
     .content-wrap {
         padding: 6em 0 8em;
