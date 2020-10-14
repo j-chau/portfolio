@@ -1,16 +1,21 @@
 body {
-    padding-top: 50px;
+    padding-top: 40px;
+}
+header {
+    background-image: url('./../assets/banner-img.jpg');
+    background-size: cover;
+    background-repeat: none;
+    background-position: 50% 55%;
+    height: 600px;
 }
 header nav {
     display: flex;
     justify-content: space-between;
+    padding: 1.4em 0;
     ul {
         display: flex;
     }
     li {
         padding-left: 2em;
-        a {
-            padding: 0.5em 0;
-        }
     }
 }
