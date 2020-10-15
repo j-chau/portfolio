@@ -1,8 +1,25 @@
 .skills-content {
     padding: 6em 0;
+    background-color: $black;
+    background-image: url('./../assets/section-img2.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top right;
+    @include shift-border;
+    &::before {
+        @include pseudo;
+        top: $shift-size;
+        left: $shift-size;
+        width: calc(100% - 31px);
+        height: calc(100% - 31px);
+        border-top: 1px solid white;
+        border-left: 1px solid white;
+        z-index: 1;
+    }
 }
 .skills-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1em;
+    padding-right: 20%;
 }

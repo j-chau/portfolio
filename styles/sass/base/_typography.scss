@@ -51,14 +51,11 @@ h2 {
 h3 {
     margin: 0.5em 0 1.2em;
 }
-.project-list li {
-    &:nth-of-type(-n + 2) h3::before {
-        @include project-arrow(-6px);
-        border-right: $arrow-size solid $light-grey;
+.skills-content {
+    color: #fff;
+    h2 {
+        color: inherit;
     }
-    &:nth-of-type(n + 3) h3::after {
-        @include project-arrow(6px);
-        border-left: $arrow-size solid $light-grey;
     }
 }
 .blog-list li h3 {
