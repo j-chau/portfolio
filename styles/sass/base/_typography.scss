@@ -56,24 +56,16 @@ h3 {
     h2 {
         color: inherit;
     }
-    }
 }
-.blog-list li h3 {
+.project-list li h3 {
         font-size: 1.3em;
         margin: 0.8em 0 0.5em;
-    }
-    .publish-date {
-    font-size: 0.7em;
-    letter-spacing: 0.8px;
-    span {
-        color: $black;
-    }
-    .category {
-        border-bottom: 1px dotted $light-grey;
-    }
 }
 .contact-content h2 {
     margin-bottom: 2em;
+    }
+a {
+}
 }
 p { 
     line-height: 1.4em;
