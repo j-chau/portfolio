@@ -55,5 +55,27 @@
 .tech-list {
     display: flex;
     justify-content: center;
-    margin-right: 5%;
+    margin: auto 5% 3%;
+}
+.tech-icon {
+    filter: grayscale(100%);
+    transition: filter 300ms linear;
+    &:hover {
+        filter: grayscale(50%);
+    }
+}
+.jq, .contentful {
+    width: 80%;
+    margin: auto;
+}
+.jq {
+    width: 90%;
+    filter: brightness(0.3) invert(0.7) sepia(0) hue-rotate(140deg) saturate(150%);
+    &:hover {
+        filter: brightness(0.3) invert(0.7) sepia(0.7) hue-rotate(140deg) saturate(150%);
+    }
+}
+.gh-link {
+    display: block;
+    align-self: end;
 }
