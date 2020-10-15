@@ -9,7 +9,7 @@ header {
     height: 600px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     @include shift-border;
 }
 header nav {
@@ -25,6 +25,6 @@ header nav {
     }
 }
 h1 {
-    margin: auto auto 20%;
+    margin: auto;
     width: max-content;
 }
