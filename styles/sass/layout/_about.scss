@@ -4,7 +4,9 @@
     > * {
         width: 50%;
     }
-}
-.about-text {
-    margin-left: 150px;
+    .img-container {
+        width: 40%;
+        margin-right: 130px;
+        @include shift-border;
+    }
 }
