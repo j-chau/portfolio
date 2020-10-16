@@ -6,6 +6,11 @@ body {
     font-weight: 300;
     color: $dark-grey;
 }
+@media (max-width: 600px) {
+    body {
+        font-size: 1.4rem;
+    }
+}
 header {
     color: $black;
 }

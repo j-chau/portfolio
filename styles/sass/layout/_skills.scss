@@ -38,3 +38,9 @@
         padding-right: 0;
     }
 }
+@media (max-width: 600px) {
+    .skills-list {
+        grid-template-columns: 55% 45%;
+        margin-left: 5%;
+    }
+}

@@ -8,9 +8,6 @@
         display: flex;
         justify-content: space-between;
     }
-    h2 {
-        width: 100%;
-    }
     form {
         width: 60%;
     }
@@ -53,5 +50,31 @@
     margin: 0.5em;
     i {
         width: 30px;
+    }
+}
+@media (max-width: 767px) {
+    .contact-content {
+        background-position: 75%;
+        .content-wrap {
+            flex-direction: column;
+            align-items: center;
+            & > * {
+                width: 100%;
+            }
+        }
+    }
+    .social-list {
+        margin-top: 4em;
+        h2 {
+            width: max-content;
+            margin-left: auto;
+        }
+    }
+    .social-link {
+        text-align: right;
+        width: unset;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        margin: 0.5em 0;
     }
 }

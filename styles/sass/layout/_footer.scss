@@ -9,3 +9,8 @@ footer {
         width: 90%;
     }
 }
+@media (max-width: 600px) {
+    footer p:nth-child(2) {
+        display: none;
+    }
+}
