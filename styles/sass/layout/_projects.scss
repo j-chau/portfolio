@@ -76,3 +76,8 @@
         display: inline-block;
     }
 }
+@media (max-width: 370px) {
+    .code-links a {
+        width: 80px;
+    }
+}

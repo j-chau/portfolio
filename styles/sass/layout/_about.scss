@@ -26,3 +26,11 @@
         }
     }
 }
+@media (max-width: 425px) {
+    .about-content {
+        margin-bottom: 8em;
+        .img-container {
+            width: 90%;
+        }
+    }
+}

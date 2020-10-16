@@ -51,3 +51,9 @@
         margin-left: 5%;
     }
 }
+@media (max-width: 370px) {
+    .skills-list {
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: 0;
+    }
+}

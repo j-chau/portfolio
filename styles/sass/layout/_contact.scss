@@ -18,6 +18,11 @@
         @include shift-border($shift-size-half);
     }
 }
+@media (max-width: 370px) {
+    .contact-content {
+        margin-top: 170px;
+    }
+}
 .input {
     border: 1px solid $dark-grey;
     margin-bottom: 1.6em;
