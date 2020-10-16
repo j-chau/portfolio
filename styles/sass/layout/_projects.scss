@@ -15,6 +15,11 @@
         }
     }
 }
+@media (max-width: 768px) {
+    .project-list {
+        grid-template-columns: 1fr;
+    }
+}
 .img-ratio {
     position: relative;
     overflow: hidden;

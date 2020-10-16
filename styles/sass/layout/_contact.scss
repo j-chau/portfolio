@@ -15,6 +15,11 @@
         width: 60%;
     }
 }
+@media (max-width: 768px) {
+    .contact-content {
+        margin-top: 270px;
+    }
+}
 .input {
     border: 1px solid $dark-grey;
     margin-bottom: 1.6em;

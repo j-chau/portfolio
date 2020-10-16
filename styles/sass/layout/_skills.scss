@@ -27,3 +27,14 @@
     gap: 1em;
     padding-right: 20%;
 }
+@media (max-width: 768px) {
+    .skills-content {
+        padding: 6em 0;
+        height: unset;
+        background-image: none;
+    }
+    .skills-list {
+        grid-template-columns: repeat(2, 1fr) 15%;
+        padding-right: 0;
+    }
+}
