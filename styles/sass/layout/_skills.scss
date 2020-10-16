@@ -32,6 +32,13 @@
         padding: 6em 0;
         height: unset;
         background-image: none;
+        @include shift-border($shift-size-half);
+        &::before {
+            top: $shift-size-half;
+            left: $shift-size-half;    
+            width: calc(100% - 16px);
+            height: calc(100% - 16px);    
+        }
     }
     .skills-list {
         grid-template-columns: repeat(2, 1fr) 15%;

@@ -15,6 +15,7 @@
 @media (max-width: 768px) {
     .contact-content {
         margin-top: 270px;
+        @include shift-border($shift-size-half);
     }
 }
 .input {

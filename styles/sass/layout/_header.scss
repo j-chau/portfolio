@@ -28,3 +28,8 @@ h1 {
     margin: auto;
     width: max-content;
 }
+@media (max-width: 768px) {
+    header {
+        @include shift-border($shift-size-half);
+    }
+}
