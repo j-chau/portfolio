@@ -282,21 +282,21 @@
 
         <section id="contact" class="contact-content">
             <div class="content-wrap">
-                <form>
+                <form id="message">
                     <h2>Let's Connect</h2>
                     <div class="input">
                         <label for="name">Name</label>
-                        <input type="text" id="name">
+                        <input type="text" id="name" name="name">
                     </div>
                     <div class="input">
                         <label for="email">Email</label>
-                        <input type="email" id="email">
+                        <input type="email" id="email" name="email">
                     </div>
                     <div class="input">
                         <label for="msg" class="msg-label">Message</label>
-                        <textarea rows="5"></textarea>
+                        <textarea rows="5" name="message"></textarea>
                     </div>
-                    <button type="submit">Submit</button>
+                    <button type="submit" id="submitForm">Submit</button>
                 </form>
                 <nav class="social-list">
                     <h2>Follow Me</h2>

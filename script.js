@@ -25,3 +25,19 @@ const hideMenu = () => {
     if (window.matchMedia("(max-width: 768px)").matches) hideTabs("-1");
 }
 hideMenu();
+
+document.getElementById("submitForm").onclick = (e) => {
+    e.preventDefault();
+
+    let scriptURL = 'https://script.google.com/macros/s/AKfycbzpWzRtjcIKwDKl3LABAuMogVkXmzAsINr2jXhIb23N3d34B7Ox/exec?';
+    const formArr = Object.values(e.target.parentElement.children);
+    formArr.pop();
+    formArr.shift();
+    formArr.forEach(el => {
+        const divInputs = Object.values(el.children);
+        scriptURL += `${divInputs[1].name}=${divInputs[1].value}&`
+    });
+    console.log(scriptURL);
+
+    fetch(scriptURL, { method: 'GET' })
+}
