@@ -1,9 +1,13 @@
+.vscode
 theme
 placeholders
+
 assets/assets-originals
 assets/contact-img-warm.jpg
 assets/section-img1.jpg
+
 assets/icons/icons8-c++-50.png
 assets/icons/icons8-redux-50.png
 assets/icons/icons8-git-50.png
-.vscode
+
+assets/project-imgs/project-atmosphere3.jpg
