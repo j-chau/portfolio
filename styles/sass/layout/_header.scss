@@ -28,9 +28,59 @@ h1 {
     margin: auto;
     width: max-content;
 }
+.burger-menu {
+    display: none;
+}
 @media (max-width: 768px) {
     header {
         @include shift-border($shift-size-half);
+    }
+    .burger-menu {
+        display: block;
+        .bar {
+            width: 20px;
+            height: 3px;
+            margin-bottom: 3px;
+            border-radius: 3px;
+            background-color: $dark-grey;
+            transition: transform 300ms linear;
+        }
+        .bar:nth-of-type(2) {
+            margin-left: 5px;
+        }
+        &:focus {
+            outline-offset: 5px;
+        }
+    }
+    .close-burger {
+        .bar:nth-of-type(1) {
+            transform: rotate(40deg) translate(3px, 6px);
+        }
+        .bar:nth-of-type(2) {
+            transform: scaleX(0);
+        }
+        .bar:nth-of-type(3) {
+            transform: rotate(-40deg) translate(2px, -6px);
+        }
+    }
+    nav.content-wrap {
+        position: relative;
+    }
+    .top-nav {
+        flex-direction: column;
+        text-align: right;
+        position: absolute;
+        right: 0;
+        top: 80px;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 300ms linear;
+        li {
+            padding-bottom: 1em;
+        }
+    }
+    .show {
+        transform: scaleX(1);
     }
 }
 @media (max-width: 425px) {
