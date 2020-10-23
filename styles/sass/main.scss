@@ -1,11 +1,13 @@
 @import './abstracts/variables';
 @import './abstracts/mixins';
+@import './abstracts/animations';
 
 @import './base/reset';
 @import './base/base';
 @import './base/typography';
 
 @import './components/buttons';
+@import './components/modal';
 
 @import './layout/header';
 @import './layout/about';

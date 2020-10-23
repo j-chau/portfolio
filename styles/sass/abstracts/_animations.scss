@@ -1,0 +1,20 @@
+@keyframes bounce {
+    0% {
+        bottom: 0%
+    }
+    15% {
+        bottom: 15%;
+    }
+    30% {
+        bottom: 0%;
+    }
+    40% {
+        bottom: 6%;
+    }
+    50% {
+        bottom: 0%;
+    }
+    100% {
+        bottom: 0%;
+    }
+}

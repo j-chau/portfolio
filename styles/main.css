@@ -1,3 +1,45 @@
+@-webkit-keyframes bounce {
+  0% {
+    bottom: 0%;
+  }
+  15% {
+    bottom: 15%;
+  }
+  30% {
+    bottom: 0%;
+  }
+  40% {
+    bottom: 6%;
+  }
+  50% {
+    bottom: 0%;
+  }
+  100% {
+    bottom: 0%;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    bottom: 0%;
+  }
+  15% {
+    bottom: 15%;
+  }
+  30% {
+    bottom: 0%;
+  }
+  40% {
+    bottom: 6%;
+  }
+  50% {
+    bottom: 0%;
+  }
+  100% {
+    bottom: 0%;
+  }
+}
+
 a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
   margin: 0;
   padding: 0;
@@ -424,6 +466,67 @@ button:hover::after, button:focus::after, .gh-link:hover::after, .gh-link:focus:
 
 .gh-link {
   padding: 0.8em 1.2em;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 1;
+}
+
+aside {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 450px;
+  padding: 2em 3em 1em;
+  background-color: white;
+  text-align: center;
+  z-index: 2;
+}
+
+aside h2 {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+aside .icon-container {
+  position: relative;
+  height: 100px;
+}
+
+aside .icon-container img {
+  width: unset;
+  margin-bottom: 1em;
+  position: absolute;
+  -webkit-filter: grayscale(55%);
+          filter: grayscale(55%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.bounce {
+  -webkit-animation: bounce 1200ms ease-out infinite;
+          animation: bounce 1200ms ease-out infinite;
+}
+
+.hide {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  aside {
+    width: 90%;
+  }
 }
 
 body {
@@ -867,15 +970,9 @@ h1 {
 }
 
 .code-links a {
-  width: 100px;
+  width: 10ch;
   margin: 0 2%;
   display: inline-block;
-}
-
-@media (max-width: 370px) {
-  .code-links a {
-    width: 80px;
-  }
 }
 
 .contact-content {

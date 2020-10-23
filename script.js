@@ -26,18 +26,48 @@ const hideMenu = () => {
 }
 hideMenu();
 
+const toggleModal = () => {
+    const overlay = document.getElementsByClassName("overlay")[0];
+    const thankYouModal = document.getElementsByTagName("aside")[0];
+    const mailbox = document.getElementsByClassName("mailbox")[0];
+    overlay.classList.toggle("hide");
+    thankYouModal.classList.toggle("hide");
+    mailbox.classList.toggle("bounce");
+}
+
+// for adding and removing tabbing from <main> when modal is open
+const FOCUSABLE_SELECTORS = 'a[href], input:not([disabled]), textarea:not([disabled]), button:not([disabled])';
+const main = document.querySelector('main');
+
+// send form values to Google Sheets
 document.getElementById("submitForm").onclick = (e) => {
     e.preventDefault();
-
+    e.target.textContent = "Sending ...";
     let scriptURL = 'https://script.google.com/macros/s/AKfycbzpWzRtjcIKwDKl3LABAuMogVkXmzAsINr2jXhIb23N3d34B7Ox/exec?';
     const formArr = Object.values(e.target.parentElement.children);
     formArr.pop();
     formArr.shift();
     formArr.forEach(el => {
         const divInputs = Object.values(el.children);
-        scriptURL += `${divInputs[1].name}=${divInputs[1].value}&`
+        const input = divInputs[1];
+        scriptURL += `${input.name}=${input.value}&`
+        input.value = "";
     });
-    console.log(scriptURL);
 
     fetch(scriptURL, { method: 'GET' })
+        .then(() => {
+            toggleModal();
+            const focusableElements = main.querySelectorAll(FOCUSABLE_SELECTORS);
+            focusableElements.forEach(el => el.setAttribute('tabindex', '-1'));
+            main.setAttribute('aria-hidden', 'true');
+            e.target.textContent = "Sent!";
+        })
+}
+
+document.getElementById("closeModal").onclick = () => {
+    toggleModal();
+    const focusableElements = main.querySelectorAll(FOCUSABLE_SELECTORS);
+    focusableElements.forEach(el => el.removeAttribute('tabindex'));
+    main.removeAttribute('aria-hidden');
+    document.getElementById("submitForm").textContent = "Submit";
 }

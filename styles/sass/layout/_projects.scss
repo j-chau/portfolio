@@ -71,13 +71,8 @@
 .code-links {
     text-align: center;
     a {
-        width: 100px;
+        width: 10ch;
         margin: 0 2%;
         display: inline-block;
-    }
-}
-@media (max-width: 370px) {
-    .code-links a {
-        width: 80px;
     }
 }
