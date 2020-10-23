@@ -1,3 +1,17 @@
+AOS.init({
+    duration: 1200,
+})
+
+window.addEventListener("scroll", () => {
+    const checkpoint = 350;
+    const currentScroll = window.pageYOffset;
+    if (currentScroll <= checkpoint) {
+        opacity = 1 - currentScroll / checkpoint;
+    } else {
+        opacity = 0;
+    }
+    document.querySelector(".down-arrow").style.opacity = opacity;
+});
 
 // add or remove tabbing from top menu links
 const hideTabs = (tabIndex) => {

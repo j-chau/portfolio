@@ -6,7 +6,7 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 55%;
-    height: 600px;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -30,6 +30,22 @@ h1 {
 }
 .burger-menu {
     display: none;
+}
+.scroll-down {
+    height: 10vh;
+    position: relative;
+    bottom: 8%;
+}
+.down-arrow {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    left: 50%;
+    border: 3px solid transparent;
+    border-left: 3px solid $black;
+    border-bottom: 3px solid $black;
+    transform: translateX(-50%) rotateZ(-45deg);
+    animation: bounce 1200ms ease-out 300ms infinite;
 }
 @media (max-width: 768px) {
     header {

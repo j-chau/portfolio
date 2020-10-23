@@ -8,6 +8,8 @@
 
     <script src="https://kit.fontawesome.com/29cf3aee8c.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300..600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <link rel="stylesheet" href="./styles/main.css">
 
     <link rel="icon" href="assets/icons/icons8-mountain-64.png" type="img/png">
@@ -39,9 +41,13 @@
             <p>Web Developer</p>
         </h1>
     </header>
+    <div class="scroll-down">
+        <span class="sr-only">Scroll down to continue</span>
+        <div class="down-arrow"></div>
+    </div>
 
     <main id="mainContent">
-        <section id="about">
+        <section id="about" data-aos="fade-up">
             <div class="about-content content-wrap">
                 <div class="img-container">
                     <img src="./assets/profile-img.jpg" alt="Joey holding a parasol on a sunny day">
@@ -60,7 +66,7 @@
             </div>
         </section>
 
-        <section id="skills" class="skills-content">
+        <section id="skills" class="skills-content" data-aos="fade-up">
             <div class="content-wrap">
                 <h2>Technical Skills</h2>
                 <ul class="skills-list">
@@ -80,9 +86,9 @@
         </section>
 
         <section id="projects" class="content-wrap project-content">
-            <h2>Works</h2>
+            <h2 data-aos="fade-right">Works</h2>
             <ul class="project-list">
-                <li>
+                <li data-aos="fade-right">
                     <div class="img-ratio">
                         <img src="./assets/project-imgs/project-fresh-vibes2.jpg" alt="" aria-hidden="true">
                         <img src="./assets/project-imgs/project-fresh-vibes.jpg"
@@ -128,7 +134,7 @@
                         <a href="https://github.com/j-chau/freshvibes" class="gh-link" target="_blank">GitHub</a>
                     </div>
                 </li>
-                <li>
+                <li data-aos="fade-left">
                     <div class="img-ratio project-border">
                         <img src="./assets/project-imgs/project-atmosphere2.jpg" alt="" aria-hidden="true">
                         <img src="./assets/project-imgs/project-atmosphere.jpg"
@@ -177,7 +183,7 @@
                             target="_blank">GitHub</a>
                     </div>
                 </li>
-                <li>
+                <li data-aos="fade-right">
                     <div class="img-ratio">
                         <img src="./assets/project-imgs/project-komami.jpg" alt="" aria-hidden="true">
                         <img src="./assets/project-imgs/project-komami2.jpg" alt="project: komami code; memory game">
@@ -223,7 +229,7 @@
                         <a href="https://github.com/j-chau/KomamiCode" class="gh-link" target="_blank">GitHub</a>
                     </div>
                 </li>
-                <li>
+                <li data-aos="fade-left">
                     <div class="img-ratio">
                         <img src="./assets/project-imgs/project-kosmosia3.jpg" alt="" aria-hidden="true">
                         <img src="./assets/project-imgs/project-kosmosia.jpg"
@@ -278,7 +284,7 @@
             </ul>
         </section>
 
-        <section id="contact" class="contact-content">
+        <section id="contact" class="contact-content" data-aos="fade-up">
             <div class="content-wrap">
                 <form id="message">
                     <h2>Let's Connect</h2>
@@ -338,6 +344,7 @@
         <p><a href="https://github.com/j-chau/portfolio" target="_blank">GitHub link</a> for portfolio</p>
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
 
