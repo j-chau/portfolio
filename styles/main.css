@@ -236,6 +236,10 @@ button {
   border: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .sr-only:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
