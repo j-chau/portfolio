@@ -321,28 +321,6 @@ header {
   letter-spacing: -1px;
 }
 
-header a {
-  position: relative;
-}
-
-header a::before {
-  content: '';
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 100%;
-  left: -10%;
-  bottom: 0;
-  width: 0;
-  -webkit-transition: width 300ms linear;
-  transition: width 300ms linear;
-}
-
-header a:hover::before, header a:focus::before {
-  border: 1px solid #1c1c1c;
-  width: 120%;
-}
-
 h1 p {
   position: relative;
   top: -0.9em;
@@ -589,6 +567,82 @@ header nav ul {
 
 header nav li {
   padding-left: 2em;
+}
+
+.top-nav a {
+  padding: 0.5em;
+  display: block;
+}
+
+.top-nav .border {
+  display: block;
+  position: relative;
+  top: -100%;
+  left: 0;
+  height: calc(100% + 1px);
+  width: 1px;
+  background-color: white;
+}
+
+.top-nav .border-top,
+.top-nav .border-bottom {
+  height: 1px;
+  width: calc(100% + 1px);
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+}
+
+.top-nav .border-left {
+  top: calc(calc(100% + 1px) * -2);
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+}
+
+.top-nav .border-right {
+  left: 100%;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+}
+
+.top-nav a:hover ~ .border, .top-nav a:focus ~ .border {
+  -webkit-transition: -webkit-transform 150ms linear;
+  transition: -webkit-transform 150ms linear;
+  transition: transform 150ms linear;
+  transition: transform 150ms linear, -webkit-transform 150ms linear;
+}
+
+.top-nav a:hover ~ .border-right, .top-nav a:focus ~ .border-right {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+
+.top-nav a:hover ~ .border-top, .top-nav a:focus ~ .border-top {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition-delay: 150ms;
+          transition-delay: 150ms;
+}
+
+.top-nav a:hover ~ .border-left, .top-nav a:focus ~ .border-left {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-transition-delay: calc(150ms * 2);
+          transition-delay: calc(150ms * 2);
+}
+
+.top-nav a:hover ~ .border-bottom, .top-nav a:focus ~ .border-bottom {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition-delay: calc(150ms * 3);
+          transition-delay: calc(150ms * 3);
 }
 
 h1 {

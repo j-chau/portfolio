@@ -25,21 +25,6 @@ header {
     font-size: unset;
     letter-spacing: -1px;
 }
-header a {
-    position: relative;
-    &::before {
-        @include pseudo;
-        left: -10%;
-        bottom: 0;
-        width: 0;
-        transition: width 300ms linear;
-    }
-    &:hover::before,
-    &:focus::before {
-        border: 1px solid $black;
-        width: 120%;
-    }
-}
 h1 {
     p {
         position: relative;

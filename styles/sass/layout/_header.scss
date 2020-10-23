@@ -24,6 +24,60 @@ header nav {
         padding-left: 2em;
     }
 }
+.top-nav {
+    a {
+        padding: 0.5em;
+        display: block;
+    }
+    .border {
+        display: block;
+        position: relative;
+        top: -100%;
+        left: 0;
+        height: $length;
+        width: 1px;
+        background-color: white;
+    }
+    .border-top ,
+    .border-bottom {
+        height: 1px;
+        width: $length;
+        transform: scaleX(0);
+    }
+    .border-left {
+        top: calc(#{$length} * -2);
+        transform: scaleY(0);
+    }
+    .border-right {
+        left: 100%;
+        transform: scaleY(0);
+    }
+    a:hover, a:focus {
+
+        & ~ .border {
+            transition: transform $time linear;
+        }
+        & ~ .border-right {
+            transform: scaleX(1);
+            transform-origin: bottom;
+        }
+        & ~ .border-top {
+            transform: scaleX(1);
+            transform-origin: right;
+            transition-delay: $time;
+        }
+        & ~ .border-left {
+            transform: scaleY(1);
+            transform-origin: top;
+            transition-delay: calc(#{$time} * 2);
+        }
+        & ~ .border-bottom {
+            transform: scaleX(1);
+            transform-origin: left;
+            transition-delay: calc(#{$time} * 3);
+        }
+    }
+}
 h1 {
     margin: auto;
     width: max-content;

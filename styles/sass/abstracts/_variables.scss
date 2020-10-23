@@ -3,7 +3,11 @@ $black: #1c1c1c;
 $light-grey: #bfbfbf;
 $dark-grey: #4d4d4d;
 
-// SIZES
+// SIZES - GENERAL
 $arrow-size: 7px;
 $shift-size: 30px;
 $shift-size-half: 15px;
+
+// SIZES - HEADER LINKS
+$length: calc(100% + 1px);
+$time: 150ms;
