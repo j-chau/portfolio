@@ -1,0 +1,57 @@
+.side-menu {
+    position: fixed;
+    right: 6%;
+    bottom: 130px;
+    width: max-content;
+    text-align: right;
+    z-index: 1;
+    mix-blend-mode: difference;
+    nav {
+        display: flex;
+        flex-direction: column-reverse;
+        & > * {
+            background-color: $light-grey;
+            opacity: 1;
+        }
+    }
+    .side-nav {
+        margin-bottom: 0.8em;
+        padding: 0.2em;
+        border-radius: 8px;                
+        transform: scaleY(0);
+        transform-origin: bottom;
+        transition: transform 300ms ease-out;
+        li {
+            color: $black;
+            padding: 0.3em 0.6em;
+            a {
+                position: relative;
+                &::before {
+                    @include pseudo;
+                    width: 0;
+                    right: 0;
+                    bottom: 0;
+                    border-bottom: 1px solid $black;
+                    transition: width 300ms ease-out;
+                }
+                &:hover::before {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .logo {
+        display: block;
+        height: 45px;
+        width: 45px;
+        padding: 0.5em;
+        margin-left: auto;
+        border-radius: 50%;
+        &:hover, &:focus {
+            cursor: pointer;
+        }
+    }
+    .show-menu {
+        transform: scaleY(1);
+    }
+}

@@ -42,7 +42,7 @@ hideMenu();
 
 const toggleModal = () => {
     const overlay = document.getElementsByClassName("overlay")[0];
-    const thankYouModal = document.getElementsByTagName("aside")[0];
+    const thankYouModal = document.getElementsByClassName("modal")[0];
     const mailbox = document.getElementsByClassName("mailbox")[0];
     overlay.classList.toggle("hide");
     thankYouModal.classList.toggle("hide");
@@ -84,4 +84,10 @@ document.getElementById("closeModal").onclick = () => {
     focusableElements.forEach(el => el.removeAttribute('tabindex'));
     main.removeAttribute('aria-hidden');
     document.getElementById("submitForm").textContent = "Submit";
+}
+
+document.getElementsByClassName("side-menu")[0].onclick = () => {
+    const sideNav = document.getElementsByClassName("side-nav")[0];
+    console.log(sideNav);
+    sideNav.classList.toggle("show-menu")
 }
