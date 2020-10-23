@@ -40,6 +40,28 @@
   }
 }
 
+@-webkit-keyframes fade {
+  0% {
+    right: 0%;
+    opacity: 0;
+  }
+  100% {
+    right: 6%;
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  0% {
+    right: 0%;
+    opacity: 0;
+  }
+  100% {
+    right: 6%;
+    opacity: 1;
+  }
+}
+
 a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
   margin: 0;
   padding: 0;
@@ -513,7 +535,8 @@ button:hover::after, button:focus::after, .gh-link:hover::after, .gh-link:focus:
 
 .side-menu {
   position: fixed;
-  right: 6%;
+  right: 0%;
+  opacity: 0;
   bottom: 130px;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -592,7 +615,7 @@ button:hover::after, button:focus::after, .gh-link:hover::after, .gh-link:focus:
   cursor: pointer;
 }
 
-.side-menu .show-menu {
+.side-menu .show-nav {
   -webkit-transform: scaleY(1);
           transform: scaleY(1);
 }

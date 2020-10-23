@@ -4,11 +4,14 @@ AOS.init({
 
 window.addEventListener("scroll", () => {
     const checkpoint = 350;
+    const sideMenu = document.querySelector(".side-menu");
     const currentScroll = window.pageYOffset;
     if (currentScroll <= checkpoint) {
         opacity = 1 - currentScroll / checkpoint;
+        sideMenu.style.animation = "none";
     } else {
         opacity = 0;
+        sideMenu.style.animation = "fade 1000ms ease-out 1 forwards";
     }
     document.querySelector(".down-arrow").style.opacity = opacity;
 });
@@ -86,8 +89,8 @@ document.getElementById("closeModal").onclick = () => {
     document.getElementById("submitForm").textContent = "Submit";
 }
 
+// show side-menu on click
 document.getElementsByClassName("side-menu")[0].onclick = () => {
     const sideNav = document.getElementsByClassName("side-nav")[0];
-    console.log(sideNav);
-    sideNav.classList.toggle("show-menu")
+    sideNav.classList.toggle("show-nav")
 }

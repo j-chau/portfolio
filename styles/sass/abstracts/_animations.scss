@@ -18,3 +18,13 @@
         bottom: 0%;
     }
 }
+@keyframes fade {
+    0% {
+        right: 0%;
+        opacity: 0;
+    }
+    100% {
+        right: 6%;
+        opacity: 1;
+    }
+}

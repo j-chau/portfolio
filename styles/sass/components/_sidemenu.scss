@@ -1,6 +1,7 @@
 .side-menu {
     position: fixed;
-    right: 6%;
+    right: 0%;
+    opacity: 0;
     bottom: 130px;
     width: max-content;
     text-align: right;
@@ -51,7 +52,7 @@
             cursor: pointer;
         }
     }
-    .show-menu {
+    .show-nav {
         transform: scaleY(1);
     }
 }
