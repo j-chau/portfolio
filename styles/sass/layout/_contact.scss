@@ -14,13 +14,7 @@
 }
 @media (max-width: 768px) {
     .contact-content {
-        margin-top: 270px;
         @include shift-border($shift-size-half);
-    }
-}
-@media (max-width: 370px) {
-    .contact-content {
-        margin-top: 170px;
     }
 }
 .input {
