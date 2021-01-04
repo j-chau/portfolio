@@ -1,8 +1,17 @@
 footer {
-    display: flex;
-    justify-content: space-between;
     font-size: 0.8em;
     padding: calc(1.2em + 30px) 0 2.4em;
+}
+.credits {
+    display: flex;
+    justify-content: space-between;
+}
+.greengeeks-seal {
+    padding-top: 1.2em;
+    text-align: center;
+    img {
+        width: 60px;
+    }
 }
 @media (max-width: 768px) {
     footer.content-wrap {
