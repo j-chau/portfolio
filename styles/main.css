@@ -604,8 +604,9 @@ button:hover::after, button:focus::after, .gh-link:hover::after, .gh-link:focus:
 
 .side-menu .logo {
   display: block;
-  height: 45px;
-  width: 45px;
+  line-height: 1.35em;
+  height: 2.4em;
+  width: 2.4em;
   padding: 0.5em;
   margin-left: auto;
   border-radius: 50%;
