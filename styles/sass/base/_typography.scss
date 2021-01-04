@@ -81,7 +81,8 @@ h3 {
 .highlight, footer a {
     filter: invert(100%);
     padding: 0 0.2em 0.1em;
-    background-color: white;
+    color: #161616;
+    background-color: $white;
     position: relative;
     &::before {
         @include pseudo;
